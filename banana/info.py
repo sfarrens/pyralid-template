@@ -11,9 +11,9 @@ version_info = (0, 0, 0)
 __version__ = '.'.join(str(c) for c in version_info)
 
 # Set the package details
-__author__ = 'Your Name'
-__email__ = 'Your Email Address'
-__url__ = 'Repository URL'
+__author__ = 'Austin Peel'
+__email__ = 'austin.peel@cea.fr'
+__url__ = 'https://github.com/austinpeel/banana'
 __license__ = 'MIT'
 __description__ = 'Short description of your package'
 __about__ = (f'{__name__} \n\n '
