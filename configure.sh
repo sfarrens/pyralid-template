@@ -25,4 +25,5 @@ grep -rl "package_name" . --exclude=*.pyc
 
 echo
 
+export LC_ALL=C
 grep -rl "package_name" . --exclude=*.pyc | xargs sed -i '' -e 's/package_name/${_package_name_}/g'
