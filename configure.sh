@@ -26,4 +26,4 @@ grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.s
 echo
 
 export LC_ALL=C
-grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e 's/package_name/${_package_name_}/g'
+grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s/package_name/$_package_name_/g"
