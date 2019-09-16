@@ -25,4 +25,4 @@ grep -rl "package_name" . --exclude=*.pyc
 
 echo
 
-grep -rl "package_name" . --exclude=*.pyc | xargs sed -i 's/package_name/$_package_name_/g'
+grep -rl "package_name" . --exclude=*.pyc | xargs sed -i '' -e 's/package_name/${_package_name_}/g'
