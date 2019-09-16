@@ -21,9 +21,9 @@ fi
 
 echo "Updating 'package_name' to '$_package_name_' in the following files:"
 
-grep -rl "package_name" . --exclude=*.pyc
+grep -rl "package_name" . --exclude=*.pyc --exclude=*.git*
 
 echo
 
 export LC_ALL=C
-grep -rl "package_name" . --exclude=*.pyc | xargs sed -i '' -e 's/package_name/${_package_name_}/g'
+grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* | xargs sed -i '' -e 's/package_name/${_package_name_}/g'
