@@ -1,8 +1,21 @@
 # Python Package Template
 
+---
+author: Samuel Farrens
+date: 2019
+---
+
 This template is designed to enable users to quickly package a Python project. After following the set-up instructions you should be able to run CI tests and automatically generate API documentation for your code.
 
+## Contents
+---
+
+1. [Set-Up](#Set-Up)
+1. [Management](#Management)
+1. [Deployment](#Deployment)
+
 ## Set-Up
+---
 
 In order to use this template please follow the instructions provided below.
 
@@ -128,6 +141,7 @@ git push origin new_branch
 7. Once your CI tests have passed you can merge your pull request, which should automatically generate your package API documentation. Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
 
 ## Management
+---
 
 Now that your package is set up you can start managing your own code.
 
@@ -152,5 +166,6 @@ Now that your package is set up you can start managing your own code.
 4. Customise the running of your CI tests in `.travis.yml`.
 
 ## Deployment
+---
 
 Details coming soon!
