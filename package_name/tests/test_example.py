@@ -8,7 +8,7 @@ This module contains unit tests for the example module.
 
 from unittest import TestCase
 import numpy.testing as npt
-from .example import *
+from ..example import *
 
 
 class ExampleTestCase(TestCase):

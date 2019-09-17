@@ -41,27 +41,42 @@ git push
 
 The following instructions are for the Travis-CI website.
 
-1. Go to https://travis-ci.org/
+1. Go to https://travis-ci.org/.
 2. Log in using your GitHub account details.
 3. Go to your list of repositories (https://travis-ci.org/account/repositories).
 4. Find the package name you provided for the repository and click the switch on the right to activate CI tests.
 
-### Step 4: Automate API documentation build
+> Note: if you can't find your repository try clicking the `Sync account` button on the top left.
+
+### Step 4: Activate coverage tests
+
+The following instructions are for the Coveralls website.
+
+1. Go to https://coveralls.io/.
+2. Log in using your GitHub account details.
+3. Go to the menu on the left and click on `Add repos`.
+4. Find the package name you provided for the repository and click the switch on the left to activate coverage tests.
+
+### Step 5: Automate API documentation build
 
 1. In the root directory of your package run:
 ```bash
 git checkout -b gh-pages
 git rm -rf .
 git push --set-upstream origin gh-pages
+git commit -m "cleaning gh-pages"
+git push
+git checkout master
+git branch -d gh-pages
 ```
 2. On your GitHub page, go to Settings>Developer settings>Personal access tokens.
-3. Click on the `Generate new token` button and copy the token string.
+3. Click on the `Generate new token` button and copy the token string. Be sure to **save the token!**
 4. On the Travis website, click on your package and go to More options>Settings.
 5. Under `Environment Variables` provide the name `GH_TOKEN`, then paste the value of your personal access token, and click the `Add` button.
 
 > More detailed instructions are provided in the [travis-sphinx documentation](https://github.com/Syntaf/travis-sphinx).
 
-### Step 5: Run tests
+### Step 6: Run tests
 
 Please do the following to make sure everything is working as expected.
 
@@ -83,7 +98,7 @@ def add_float(x, y):
     y : float
         Second value
 
-    Retunrs
+    Returns
     -------
     float
         Result of addition
@@ -106,8 +121,8 @@ git add .
 git commit -m "testing"
 git push origin new_branch
 ```
-4. Go to the your remote repository and click on the `Create pull request` button that should have appeared for your branch.
-5. Follow the instruction to open your pull request.
+4. Go to the your remote repository and click on the `Compare & pull request` button that should have appeared for your branch.
+5. Provide a title and description for your pull request and click the `Create pull request` button.
 6. Once open your pull request should automatically launch the Travis CI tests. Click on the link that appears to follow their progress.
 7. Once your CI tests have passed you can merge your pull request, which should automatically generate your package API documentation. Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
 

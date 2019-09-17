@@ -21,10 +21,8 @@ __requires__ = []  # Your package dependencies
 
 # Default package properties
 __license__ = 'MIT'
-__about__ = (f'{__name__} \n\n '
-             'Author: {__author__} \n '
-             'Email: {__email__} \n '
-             'Year: {__year__} \n '
-             '{__long_description__} \n\n')
+__about__ = ('{} \n\n Author: {} \n Email: {} \n Year: {} \n {} \n\n'
+             ''.format(__name__, __author__, __email__, __year__,
+                       __long_description__))
 __setup_requires__ = ['pytest-runner', ]
 __tests_require__ = ['pytest', 'pytest-cov', 'pytest-pep8']
