@@ -46,11 +46,11 @@ update_template() {
 
 export LC_ALL=C
 mv ./package_name ./$_package_name_
-update_template "configure_package_name" $_package_name_
-update_template "configure_author" $_author_
-update_template "configure_email" $_email_
-update_template "configure_year" $_year_
-update_template "configure_url" $_url_
+update_template "configure_package_name" "$_package_name_"
+update_template "configure_author" "$_author_"
+update_template "configure_email" "$_email_"
+update_template "configure_year" "$_year_"
+update_template "configure_url" "$_url_"
 
 
 # grep -rl "configure_package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s/configure_package_name/$_package_name_/g"
