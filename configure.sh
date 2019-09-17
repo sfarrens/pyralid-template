@@ -41,7 +41,7 @@ if [ "$_response_" != "Y"  ] && [ "$_response_" != "y"  ]; then
 fi
 
 update_template() {
-  grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s/$1/$2/g"
+  grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s,$1,$2,g"
 }
 
 export LC_ALL=C
