@@ -6,10 +6,10 @@ read -p "> " _package_name_
 
 echo
 
-echo "'package_name' will be updated to '$_package_name_' in the following files:"
+echo "'configure_package_name' will be updated to '$_package_name_' in the following files:"
 
 ls ./package_name
-grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh
+grep -rl "configure_package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh
 
 echo
 
@@ -28,4 +28,4 @@ fi
 
 export LC_ALL=C
 mv ./package_name ./$_package_name_
-grep -rl "package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s/package_name/$_package_name_/g"
+grep -rl "configure_package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s/configure_package_name/$_package_name_/g"

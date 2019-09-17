@@ -11,4 +11,4 @@ Package Contents
    :maxdepth: 3
 
    examples
-   package_name
+   configure_package_name
