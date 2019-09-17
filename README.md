@@ -69,20 +69,36 @@ Please do the following to make sure everything is working as expected.
 ```bash
 git checkout -b new_branch
 ```
-2. Make a modification to any of the files. *e.g.* modify the content of `hello.py`.
+2. Make a modification to any of the files. *e.g.* add a new function to `math.py`.
 ```python
-# -*- coding: utf-8 -*-
+def add_float(x, y):
+    """Add Floats
 
+    Add two float values.
 
-def hello_world():
-    """Hello World
+    Parameters
+    ----------
+    x : float
+        First value
+    y : float
+        Second value
 
-    Print 'Hello Brave New World!'
+    Retunrs
+    -------
+    float
+        Result of addition
+
+    Raises
+    ------
+    TypeError
+        For invalid input types.
 
     """
 
-    print('Hello Brave New World!')
+    if not isinstance(x, float) or not isinstance(y, float):
+        raise TypeError('Inputs must be floats.')
 
+    return x + y
 ```
 3. Add, commit and push your changes.
 ```bash
@@ -102,8 +118,8 @@ Now that your package is set up you can start managing your own code.
 ### Add new content
 
 1. Add new module following the contents `example` folder. Be sure to include a `__init__.py` file in every new directory you create.
-2. Add new submodules following the contents of `hello.py`. Be sure to follow the [Numpy docstring conventions](https://numpydoc.readthedocs.io/en/latest/format.html) in writing your API documentation.
-3. Write unit tests as you add new functions and classes to retain the highest possible code coverage.
+2. Add new submodules following the contents of `hello.py` and `math.py`. Be sure to follow the [Numpy docstring conventions](https://numpydoc.readthedocs.io/en/latest/format.html) in writing your API documentation.
+3. Write unit tests as you add new functions and classes to retain the highest possible code coverage. Follow the examples in `tests`.
 
 ### Clean up
 
