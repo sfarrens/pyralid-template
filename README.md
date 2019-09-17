@@ -1,8 +1,9 @@
 # Python Package Template
 
 ---
-author: Samuel Farrens
-date: 2019
+> Author: <a href="http://www.cosmostat.org/people/sfarrens" target="_blank" style="text-decoration:none; color: #F08080">Samuel Farrens</a>  
+> Email: <a href="mailto:samuel.farrens@cea.fr" style="text-decoration:none; color: #F08080">samuel.farrens@cea.fr</a>  
+> Year: 2019  
 ---
 
 This template is designed to enable users to quickly package a Python project. After following the set-up instructions you should be able to run CI tests and automatically generate API documentation for your code.
