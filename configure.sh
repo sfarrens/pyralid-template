@@ -67,7 +67,7 @@ echo
 
 _response2_=${_response2_:-"n"}
 
-if [ "$_response_" != "Y"  ] && [ "$_response_" != "y"  ]; then
+if [ "$_response2_" != "Y"  ] && [ "$_response2_" != "y"  ]; then
   finish
 fi
 
