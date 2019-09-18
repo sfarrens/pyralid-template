@@ -155,7 +155,7 @@ Now that your package is set up you can start managing your own code.
 ### Clean up
 
 1. Once you have added some of your own content remove the `example` module and corresponding tests.
-2. Update `info.py` with a description of what your code does.
+2. Update `info.py` with a list of your code dependencies so that they can be installed automatically with your package.
 3. Replace this `README.md` with your own package documentation.
 4. Update `docs/source/index.rst` with a more detailed description of your package.
 
@@ -169,4 +169,30 @@ Now that your package is set up you can start managing your own code.
 ## Deployment
 ---
 
-Details coming soon!
+In order to upload your package to [PyPi](https://pypi.org/) (which allow users to install your package with `pip`), you should follow these steps:
+
+1. Check if your package name has already been taken. *e.g.*
+```bash
+pip search mypackage
+```
+2. If the name is already taken, you may want to rename your package.
+3. Create an account on https://pypi.org/.
+4. Install twine.
+```bash
+pip install twine
+```
+5. Build a distribution of your package.
+```bash
+python setup.py sdist bdist_wheel
+```
+6. Finally, upload your distribution to PyPi.
+```bash
+twine upload dist/*
+```
+7. Your package can now be installed anywhere using `pip`. *e.g.*
+```bash
+pip install mypackage
+```
+8. To update your package, change the version number in `info.py` and repeat steps 5 and 6.
+
+> Note that step 6 can be simplied by creating a [.pypirc](https://docs.python.org/3.3/distutils/packageindex.html#pypirc) file.
