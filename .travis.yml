@@ -16,7 +16,6 @@ branches:
 # install package and dependencies
 install:
   - pip install coverage nose pytest pytest-cov
-  - pip install astropy scikit-image
   - if [[ $TRAVIS_PYTHON_VERSION == '3.6' ]]; then pip install sphinx sphinx-rtd-theme numpydoc travis-sphinx coveralls; fi
 
 # run unit tests
