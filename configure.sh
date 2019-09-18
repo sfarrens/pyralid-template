@@ -7,6 +7,7 @@ read -p "> Your email address: " _email_
 read -p "> The current year [2019]: " _year_
 read -p "> Your package name: " _package_name_
 read -p "> Your package GitHub address: " _url_
+read -p "> A short description of your package: " _describe_
 
 _year_=${_year_:-"2019"}
 
@@ -24,6 +25,7 @@ echo " - Your name: $_author_"
 echo " - Your email_address: $_email_"
 echo " - The current year: $_year_"
 echo " - Your package GitHub address: $_url_"
+echo " - A short description of your package: $_describe_"
 
 echo
 
@@ -51,6 +53,7 @@ update_template "configure_author" "$_author_"
 update_template "configure_email" "$_email_"
 update_template "configure_year" "$_year_"
 update_template "configure_url" "$_url_"
+update_template "configure_description" "$_describe_"
 
 finish() {
   echo "All done!"
