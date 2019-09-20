@@ -25,8 +25,8 @@ class ExampleTestCase(TestCase):
 
     def test_add_int(self):
 
-        npt.assert_equal(example.math.add_int(self.x, self.y), 3,
+        npt.assert_equal(math.add_int(self.x, self.y), 3,
                          err_msg='Incorrect addition result.')
 
-        npt.assert_raises(TypeError, example.math.add_int, self.x,
+        npt.assert_raises(TypeError, math.add_int, self.x,
                           float(self.y))
