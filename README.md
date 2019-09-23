@@ -174,6 +174,20 @@ Now that your package is set up you can start managing your own code.
 4. Customise the running of your CI tests in `.travis.yml`.
 5. Add badges to your `README.md` from *e.g.* [Travis](https://docs.travis-ci.com/user/status-images/).
 
+### Local Tests
+
+To speed up development of your package it may be convenient to run tests locally before submitting a pull request. This can be done as follows:
+
+1. Install the developer tools.
+```bash
+pip install -r develop.txt
+```
+2. Run the tests locally.
+```bash
+python setup.py test
+```
+
+
 ## Deployment
 ---
 
