@@ -43,7 +43,11 @@ if [ "$_response_" != "Y"  ] && [ "$_response_" != "y"  ]; then
 fi
 
 update_template() {
-  grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s,$1,$2,g"
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s,$1,$2,g"
+  else
+    grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i -e "s,$1,$2,g"
+  fi
 }
 
 export LC_ALL=C
