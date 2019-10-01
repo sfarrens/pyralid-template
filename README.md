@@ -75,6 +75,8 @@ The following instructions are for the Coveralls website.
 3. Go to the menu on the left and click on `Add repos`.
 4. Find the package name you provided for the repository and click the switch on the left to activate coverage tests.
 
+> Note: that private GitHub repositories require a pro account on Coveralls.
+
 ### Step 5: Automate API documentation build
 
 The objective of this step is to allow Travis to automatically generate your API documentation every time you make a pull request.
