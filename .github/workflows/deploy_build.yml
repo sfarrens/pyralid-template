@@ -26,7 +26,7 @@ jobs:
       - name: Build API Documentation
         uses: ammaraskar/sphinx-action@master
         with:
-        docs-folder: "docs/"
+          docs-folder: "docs/"
 
       - name: Deploy API Documentation
         uses: peaceiris/actions-gh-pages@v3.5.9
