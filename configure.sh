@@ -91,7 +91,7 @@ finish() {
   exit 1
 }
 
-echo "Do you want the script to execute git commands for you?"
+echo "Do you want the script to push these changes to GitHub for you?"
 read -p "> [y/N]: " _response2_
 
 echo
@@ -107,15 +107,5 @@ echo "Commiting changes to template."
 git add .
 git commit -m "updated template"
 git push
-
-echo "Creating gh-pages branch for API documentation."
-
-git checkout --orphan gh-pages
-git rm -rf .
-git push --set-upstream origin gh-pages
-git commit -m "cleaning gh-pages"
-git push
-git checkout master
-git branch -d gh-pages
 
 finish
