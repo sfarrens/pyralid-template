@@ -110,7 +110,7 @@ git push
 
 echo "Creating gh-pages branch for API documentation."
 
-git checkout -b gh-pages
+git checkout --orphan gh-pages
 git rm -rf .
 git push --set-upstream origin gh-pages
 git commit -m "cleaning gh-pages"
