@@ -19,7 +19,7 @@ __description__ = 'configure_description'
 
 # Default package properties
 __license__ = 'MIT'
-__about__ = ('{} \n\n Author: {} \n Email: {} \n Year: {} \n {} \n\n'
+__about__ = ('{} Author: {}, Email: {}, Year: {}, Description: {}'
              ''.format(__name__, __author__, __email__, __year__,
                        __description__))
 __setup_requires__ = ['pytest-runner', ]
