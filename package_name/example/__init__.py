@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
-"""Example Module
+"""EXAMPLE SUBPACKAGE.
 
-Provide some basic description of the example module.
+Provide a basic description of the example subpackage.
 
 """
-
-__all__ = ['hello', 'math']  # List of submodules
-
-from . import *
