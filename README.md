@@ -102,17 +102,17 @@ git checkout -b new_branch
 ```
 2. Make a modification to any of the files. *e.g.* add a new function to `example/math.py`.
 ```python
-def add_float(x: float, y: float) -> float:
-    """Add Floats.
+def add_float(first_value: float, second_value: float) -> float:
+    """Add Two Floats.
 
     Add two float values.
 
     Parameters
     ----------
     first_value : float
-        First value
+        First float value
     second_value : float
-        Second value
+        Second float value
 
     Returns
     -------
@@ -125,8 +125,10 @@ def add_float(x: float, y: float) -> float:
         For invalid input types.
 
     """
+    fv_is_float = isinstance(first_value, float)
+    sv_is_float = isinstance(second_value, float)
 
-    if not isinstance(x, float) or not isinstance(y, float):
+    if not all((fv_is_float, sv_is_float)):
         raise TypeError('Inputs must be floats.')
 
     return first_value + second_value
@@ -140,7 +142,8 @@ git push origin new_branch
 4. Go to the your remote repository and click on the `Compare & pull request` button that should have appeared for your branch.
 5. Provide a title and description for your pull request and click the `Create pull request` button.
 6. Once open, your pull request should automatically launch the GitHub actions CI tests. Note that this may take a few seconds to start. Click on the link that appears if you want to follow the progress of the tests.
-7. Once your CI tests have passed you can merge your pull request, which should automatically launch the CD process. This will generate your package API documentation.Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
+7. codecov will raise an error as your new function is not covered by unit tests. You can either add some or ignore this error.
+8. Once your CI tests have passed you can merge your pull request, which should automatically launch the CD process. This will generate your package API documentation.Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
 
 ## Management
 
@@ -182,6 +185,24 @@ python setup.py test
 ```
 
 ## Deployment
+
+### Make a release
+
+Before deploying your code you should make a *release*.
+
+1. Click the button on the right of your GitHub repo that says `Create a new release`.
+
+2. Specify a *Tag version* (*e.g.* `v0.0.1`).
+
+   This should be identical to the version specified in `setup.py`.
+
+3. Provide a *Release title* (*e.g.* `First Release`).
+
+4. Describe what is included in your release.
+
+   It is good practice to specify things that have changed from previous releases.
+
+### Deploy package on PyPi
 
 In order to upload your package to [PyPi](https://pypi.org/) (which allow users to install your package with `pip`), you should follow these steps:
 
