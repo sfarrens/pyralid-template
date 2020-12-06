@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""PPT DEMO PACKAGE.
+"""configure_package_name PACKAGE.
 
 Provide a basic description of what your package contains.
 
