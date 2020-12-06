@@ -113,7 +113,7 @@ git checkout -b new_branch
 ```
 2. Make a modification to any of the files. *e.g.* add a new function to `example/math.py`.
 ```python
-def add_float(first_value: float, second_value: float) -> float:
+def add_two_floats(first_value: float, second_value: float) -> float:
     """Add Two Floats.
 
     Add two float values.
