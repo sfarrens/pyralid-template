@@ -90,7 +90,16 @@ The following instructions are for the PyUp website.
 1. Go to https://pyup.io/.
 2. Log in using your GitHub account details.
 3. Click the `Add Repo` button.
-4. Find the your repository from the list provided and click on it.
+4. Find the your repository from the list provided and click on the `Add` button.
+5. In the pop-up window leave the Setup options as they are and click the `Add` button.
+
+If you added any dependencies with the `configure.sh` script then PyUp will open some Pull Requests to pin these to the latest versions.
+
+PyUp will also create branch called `pyup-config` with a new `.pyup.yml` file. You can delete this branch as follows:
+
+```bash
+git push origin -d pyup-config
+```
 
 ### Step 5: Check that everything works
 
