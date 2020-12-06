@@ -152,7 +152,7 @@ Now that your package is set up you can start managing your own code.
 ### Add new content
 
 1. Add new subpackages following the contents of the `example` folder. Be sure to include a `__init__.py` file in every new directory you create.
-2. Add new submodules following the contents of `classes.py`, `hello.py` and `math.py`. Be sure to follow the [Numpy docstring conventions](https://numpydoc.readthedocs.io/en/latest/format.html) in writing your API documentation.
+2. Add new submodules following the contents of `classes.py`, `hello.py` and `math.py`. Be sure to follow the [Numpy docstring conventions](https://numpydoc.readthedocs.io/en/latest/format.html) and [wemake-python-styleguide](https://wemake-python-stylegui.de/) in writing your API documentation and code.
 3. Write unit tests as you add new functions and classes to retain the highest possible code coverage. Follow the examples in `tests`.
 4. To manage your code development you should follow the procedure described in Step 5 of the set-up. Note that you can continue to work on a branch you created for an open pull request up until it is merged. After merging a branch it is good practice to delete it.
 
@@ -168,8 +168,8 @@ Now that your package is set up you can start managing your own code.
 1. Get a grade for your package from [CodeFactor](https://www.codefactor.io/).
 2. Define your package contribution guidelines in `CONTRIBUTING.md`.
 3. Customise your API documentation in `docs/source/conf.py`.
-4. Customise your CI and coverage tests in `setup.cfg`.
-5. Customise the running of your CI tests in `.github/workflows`.
+4. Customise your CI tests in `setup.cfg`.
+5. Customise the running of your CI/CD tests in `.github/workflows`.
 
 ### Local Tests
 
