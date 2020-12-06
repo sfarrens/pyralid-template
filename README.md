@@ -18,6 +18,8 @@ For packaging Python projects
 
 The Pyralid template is designed to enable users to quickly package a Python project. After following the set-up instructions you should be able to automatically run CI tests and generate API documentation for your code.
 
+See [pyraliddemo](https://github.com/sfarrens/pyraliddemo) for a demo package created with the Pyralid template.
+
 ## Contents
 
 1. [Set-Up](#Set-Up)
