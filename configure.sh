@@ -2,17 +2,17 @@
 
 # Divider line
 line="########################################################################"
-version="0.0.2"
+version="0.0.3"
 
 echo
 echo $line
-echo "Python Package Set Up Script"
+echo "Pyralid Template Set Up Script"
 echo
 echo "Author: Samuel Farrens"
 echo "Year: 2020"
 echo "Version:" $version
 echo
-echo "See https://github.com/sfarrens/python_package_template for help."
+echo "See https://github.com/sfarrens/pyralid-template for help."
 echo
 echo $line
 echo
@@ -20,9 +20,9 @@ echo "Please provide the following information:"
 
 read -p "> Your name: " _author_
 read -p "> Your email address: " _email_
+read -p "> Your GitHub user name: " _ghuser_
 read -p "> The current year [2020]: " _year_
 read -p "> Your package name: " _package_name_
-read -p "> Your package GitHub address: " _url_
 read -p "> A short description of your package: " _describe_
 read -p "> A list of packages your code requires (e.g. numpy,scipy,matplotlib): " _requires_
 
@@ -34,15 +34,15 @@ echo
 echo "The following files and directories will be updated with the package name '$_package_name_':"
 
 echo ./package_name
-grep -rl "configure_package_name" . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh
+grep -rl "configure_package_name" . --exclude=.git --exclude=configure.sh
 
 echo
 
 echo "and the package will be updated with the following details:"
 echo " - Your name: $_author_"
-echo " - Your email_address: $_email_"
+echo " - Your email address: $_email_"
+echo " - Your GitHub user name: $_ghuser_"
 echo " - The current year: $_year_"
-echo " - Your package GitHub address: $_url_"
 echo " - A short description of your package: $_describe_"
 echo " - A list of packages your code requires: $_requires_"
 
@@ -63,9 +63,9 @@ fi
 
 update_template() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i '' -e "s,$1,$2,g"
+    grep -rl $1 . --exclude=.git --exclude=configure.sh| xargs sed -i '' -e "s,$1,$2,g"
   else
-    grep -rl $1 . --exclude=*.pyc --exclude=*.git* --exclude=configure.sh| xargs sed -i -e "s,$1,$2,g"
+    grep -rl $1 . --exclude=.git --exclude=configure.sh| xargs sed -i -e "s,$1,$2,g"
   fi
 }
 
@@ -81,8 +81,8 @@ mv ./package_name ./$_package_name_
 update_template "configure_package_name" "$_package_name_"
 update_template "configure_author" "$_author_"
 update_template "configure_email" "$_email_"
+update_template "configure_ghuser" "$_ghuser_"
 update_template "configure_year" "$_year_"
-update_template "configure_url" "$_url_"
 update_template "configure_description" "$_describe_"
 update_requirements
 

@@ -1,7 +1,15 @@
 # Python Package Template
 
+| Usage | Development | Release |
+| ----- | ----------- | ------- |
+| [![docs](https://img.shields.io/badge/docs-Sphinx-blue)](https://configure_ghuser.github.io/configure_package_name/) | [![build](https://github.com/configure_ghuser/configure_package_name/workflows/CI/badge.svg)](https://github.com/configure_ghuser/configure_package_name/actions?query=workflow%3ACI) | [![release](https://img.shields.io/github/v/release/configure_ghuser/configure_package_name)](https://github.com/configure_ghuser/configure_package_name/releases/latest) |
+| [![license](https://img.shields.io/github/license/configure_ghuser/configure_package_name)](https://github.com/configure_ghuser/configure_package_name/blob/master/LICENCE.txt) | [![deploy](https://github.com/configure_ghuser/configure_package_name/workflows/CD/badge.svg)](https://github.com/configure_ghuser/configure_package_name/actions?query=workflow%3ACD) | [![pypi](https://img.shields.io/pypi/v/configure_package_name)](https://pypi.org/project/configure_package_name/) |
+| [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide) | [![codecov](https://codecov.io/gh/configure_ghuser/configure_package_name/branch/master/graph/badge.svg?token=XHJIQXV7AX)](https://codecov.io/gh/configure_ghuser/configure_package_name) | [![python](https://img.shields.io/pypi/pyversions/configure_package_name)](https://www.python.org/downloads/source/) |
+| [![contribute](https://img.shields.io/badge/contribute-read-lightgrey)](https://github.com/configure_ghuser/configure_package_name/blob/master/CONTRIBUTING.md) | [![CodeFactor](https://www.codefactor.io/repository/github/configure_ghuser/configure_package_name/badge)](https://www.codefactor.io/repository/github/configure_ghuser/configure_package_name) | |
+| [![coc](https://img.shields.io/badge/conduct-read-lightgrey)](https://github.com/configure_ghuser/configure_package_name/blob/master/CODE_OF_CONDUCT.md) | [![Updates](https://pyup.io/repos/github/configure_ghuser/configure_package_name/shield.svg)](https://pyup.io/repos/github/configure_ghuser/configure_package_name/) | |
+
 ---
-> Author: <a href="http://www.cosmostat.org/people/sfarrens" target="_blank" style="text-decoration:none; color: #F08080">Samuel Farrens</a>  
+> Author: <a href="http://www.cosmostat.org/people/configure_ghuser" target="_blank" style="text-decoration:none; color: #F08080">configure_author</a>  
 > Email: <a href="mailto:samuel.farrens@cea.fr" style="text-decoration:none; color: #F08080">samuel.farrens@cea.fr</a>  
 > Year: 2019  
 ---

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Unit Tests
+"""UNIT TESTS.
 
 Unit testing framework for the package.
 

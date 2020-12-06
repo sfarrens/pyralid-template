@@ -4,33 +4,66 @@
 from setuptools import setup, find_packages
 import os
 
-__name__ = 'configure_package_name'
+# Set the package release version
+major = 0
+minor = 0
+patch = 0
 
-release_info = {}
-infopath = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                           __name__, 'info.py'))
-with open(infopath) as open_file:
-    exec(open_file.read(), release_info)
+# Set the package details
+name = 'configure_package_name'
+version = '.'.join(str(value) for value in (major, minor, patch))
+author = 'configure_author'
+email = 'configure_email'
+gh_user = 'configure_ghuser'
+url = 'https://github.com/{0}/{1}'.format(gh_user, name)
+year = 'configure_year'
+description = 'configure_description'
 
+# Set package summary
+summary = ('{} Author: {}, Email: {}, Year: {}, Description: {}'
+           ''.format(name, author, email, year, description))
+
+# Source package description from README.md
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+# Source package requirements from requirements.txt
 with open('requirements.txt') as open_file:
     install_requires = open_file.read()
 
+# Source test requirements from develop.txt
+with open('develop.txt') as open_file:
+    tests_require = open_file.read()
+
+# Source doc requirements from docs/requirements.txt
+with open('docs/requirements.txt') as open_file:
+    docs_require = open_file.read()
+
+
+# Find scripts
+def find_scripts():
+
+    sdir = 'scripts'
+
+    return [os.path.join(sdir, val) for val in os.listdir(sdir) if
+            val.endswith('.py') and '__init__' not in val]
+
+
 setup(
-    name=__name__,
-    author=release_info['__author__'],
-    author_email=release_info['__email__'],
-    version=release_info['__version__'],
-    url=release_info['__url__'],
-    packages=find_packages(),
-    install_requires=install_requires,
-    license=release_info['__license__'],
-    description=release_info['__about__'],
+    name=name,
+    author=author,
+    author_email=email,
+    version=version,
+    license='MIT',
+    url=url,
+    description=summary,
     long_description=long_description,
     long_description_content_type='text/markdown',
-    setup_requires=release_info['__setup_requires__'],
-    tests_require=release_info['__tests_require__']
+    packages=find_packages(),
+    scripts=find_scripts(),
+    install_requires=install_requires,
+    setup_requires=['pytest-runner'],
+    tests_require=tests_require,
+    extras_require={'develop': tests_require + docs_require}
 )
