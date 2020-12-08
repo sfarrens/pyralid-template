@@ -173,6 +173,7 @@ Now that your package is set up you can start managing your own code.
 2. Update `requirements.txt` with a list of your code dependencies so that they can be installed automatically with your package.
 3. Replace this `README.md` with your own package documentation.
 4. Update `docs/source/index.rst` with a more detailed description of your package.
+5. Delete the `configure.sh` script.
 
 ### Optional
 
@@ -215,7 +216,7 @@ Before deploying your code you should make a *release*.
 
 ### Deploy package on PyPi
 
-In order to upload your package to [PyPi](https://pypi.org/) (which allow users to install your package with `pip`), you should follow these steps:
+In order to upload your package to [PyPi](https://pypi.org/) (which allows users to install your package with `pip`), you should follow these steps:
 
 1. Check if your package name has already been taken. *e.g.*
 ```bash
