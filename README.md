@@ -78,7 +78,7 @@ git push
 
 ### Step 3: Activate coverage tests
 
-The following instructions are for the Coveralls website.
+The following instructions are for the codecov website.
 
 1. Go to https://codecov.io/.
 2. Log in using your GitHub account details.
