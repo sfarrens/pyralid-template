@@ -63,6 +63,7 @@ setup(
     packages=find_packages(),
     scripts=find_scripts(),
     install_requires=install_requires,
+    python_requires='>=3.6',
     setup_requires=['pytest-runner'],
     tests_require=tests_require,
     extras_require={'develop': tests_require + docs_require}
