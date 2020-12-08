@@ -78,7 +78,7 @@ git push
 
 ### Step 3: Activate coverage tests
 
-The following instructions are for the Coveralls website.
+The following instructions are for the codecov website.
 
 1. Go to https://codecov.io/.
 2. Log in using your GitHub account details.
@@ -95,7 +95,7 @@ The following instructions are for the PyUp website.
 4. Find the your repository from the list provided and click on the `Add` button.
 5. In the pop-up window leave the Setup options as they are and click the `Add` button.
 
-If you added any dependencies with the `configure.sh` script then PyUp will open some Pull Requests to pin these to the latest versions.
+If you added any dependencies with the `configure.sh` script then PyUp will open some pull requests to pin these to the latest versions.
 
 PyUp will also create branch called `pyup-config` with a new `.pyup.yml` file. You can delete this branch as follows:
 
@@ -153,8 +153,8 @@ git push origin new_branch
 4. Go to the your remote repository and click on the `Compare & pull request` button that should have appeared for your branch.
 5. Provide a title and description for your pull request and click the `Create pull request` button.
 6. Once open, your pull request should automatically launch the GitHub actions CI tests. Note that this may take a few seconds to start. Click on the link that appears if you want to follow the progress of the tests.
-7. codecov will raise an error as your new function is not covered by unit tests. You can either add some or ignore this error.
-8. Once your CI tests have passed you can merge your pull request, which should automatically launch the CD process. This will generate your package API documentation.Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
+7. codecov will raise an error if your new function is not covered by unit tests. You can either add some or ignore this error.
+8. Once your CI tests have passed you can merge your pull request, which should automatically launch the CD process. This will generate your package API documentation. Go to *e.g.* https://username.github.io/mypackage/ to view your documentation.
 
 ## Management
 
@@ -173,6 +173,7 @@ Now that your package is set up you can start managing your own code.
 2. Update `requirements.txt` with a list of your code dependencies so that they can be installed automatically with your package.
 3. Replace this `README.md` with your own package documentation.
 4. Update `docs/source/index.rst` with a more detailed description of your package.
+5. Delete the `configure.sh` script.
 
 ### Optional
 
@@ -215,7 +216,7 @@ Before deploying your code you should make a *release*.
 
 ### Deploy package on PyPi
 
-In order to upload your package to [PyPi](https://pypi.org/) (which allow users to install your package with `pip`), you should follow these steps:
+In order to upload your package to [PyPi](https://pypi.org/) (which allows users to install your package with `pip`), you should follow these steps:
 
 1. Check if your package name has already been taken. *e.g.*
 ```bash
