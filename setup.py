@@ -18,10 +18,22 @@ gh_user = 'configure_ghuser'
 url = 'https://github.com/{0}/{1}'.format(gh_user, name)
 year = 'configure_year'
 description = 'configure_description'
+license = 'MIT'
 
-# Set package summary
-summary = ('{} Author: {}, Email: {}, Year: {}, Description: {}'
-           ''.format(name, author, email, year, description))
+# Set the package classifiers
+python_versions_supported = ['3.6', '3.7', '3.8', '3.9']
+os_platforms_supported = ['Unix', 'MacOS']
+
+lc_str = 'License :: OSI Approved :: {0} License'
+ln_str = 'Programming Language :: Python'
+py_str = 'Programming Language :: Python :: {0}'
+os_str = 'Operating System :: {0}'
+
+classifiers = (
+    [lc_str.format(license)] + [ln_str] +
+    [py_str.format(ver) for ver in python_versions_supported] +
+    [os_str.format(ops) for ops in os_platforms_supported]
+)
 
 # Source package description from README.md
 this_directory = os.path.abspath(os.path.dirname(__file__))
@@ -55,9 +67,9 @@ setup(
     author=author,
     author_email=email,
     version=version,
-    license='MIT',
+    license=license,
     url=url,
-    description=summary,
+    description=description,
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=find_packages(),
@@ -66,5 +78,6 @@ setup(
     python_requires='>=3.6',
     setup_requires=['pytest-runner'],
     tests_require=tests_require,
-    extras_require={'develop': tests_require + docs_require}
+    extras_require={'develop': tests_require + docs_require},
+    classifiers=classifiers,
 )
